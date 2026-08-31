@@ -1,17 +1,17 @@
-name : hello world demo
+name: hello world demo
 
-on: 
+on:
   push:
     branches:
-        main:
-
+      - main
 
 jobs:
-	say-hello:
-	 runs-on: ubuntu-latest
-	 steps:
-	   name: Checkout code
-           uses: actions.checkout@v3
+  say-hello:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
 
-           name: Print Hello
-           run: echo "hello world"
+      - name: Print Hello
+        run: echo "hello world"
+
